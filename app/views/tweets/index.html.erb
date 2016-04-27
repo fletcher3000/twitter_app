@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>The latest Tweet's of the day</h1>
+
+<div class="row">
+  <% @t.each do |x| %>
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel panel-heading">
+          <%= link_to x.user.username, x %>
+        </div>
+        <div class="panel panel-body">
+          <%= x.message %>
+        </div>
+        <div class="panel-footer">
+          <%= link_to 'Show', x, class: "btn btn-primary" %>
+          <%= link_to 'Edit', edit_tweet_path(x), class: "btn btn-primary" %>
+          <%= link_to 'Destroy', x, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+</div>
+
+<br />
+
+
+<%= link_to 'New Tweet', new_tweet_path, class: "btn-sm btn-primary" %>

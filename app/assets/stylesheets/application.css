@@ -1,0 +1,27 @@
+
+ /*
+ *= require_tree .
+ *= require_self
+ */
+ body {
+   background-color: rgba(204,255,153,0.7);
+ 	font-family: Helvetica;
+  margin: 30px;
+ }
+
+  #tweet {
+  	margin-bottom: 0px;
+  	margin-top: -1px;
+  }
+
+  .cant-see-me {
+ 	display: none;
+ }
+ .navbar-default .navbar-brand {
+    font-family: "Open Sans", cursive;
+    color: #003459;
+  }
+
+  .btn {
+  margin-bottom:  10px;
+}
